@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: aqua;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding:  20px;
+            z-index: 1000;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .porto{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .list ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-left: 50px;
+            padding-top: 10px;
+        }
+        .list ul li{
+            cursor: pointer;
+            margin-right: 40px;
+        }
+        main{
+            min-height: calc(100vh - 160px);
+            padding: 20px;
+            margin-top: 80px;
+        }
+        footer{
+            height: 199px;
+            background-color: #2c3e50;
+        }
+        li:hover{
+            color: black;
+            font-weight: bold;
+            transition: 0.3s;
+            transform: scale(1.1);
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+            text-decoration-color: #3498db;
+            letter-spacing: 0.5px;
+            word-spacing: 2px;
+        }
+        .welc{
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px;
+        }
+        .satu{
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 18px;
+            color: #2c3e50;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            word-spacing: 2px;
+            border: 1px solid #bdc3c7;
+            border-left: 5px solid #3498db;
+            border-right: 5px solid #3498db;
+            transition: background-color 0.3s ease;
+        }
+        .satu:hover{
+            background-color: #d0d7de;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #2980b9;
+            border-right: 5px solid #2980b9;
+            transform: translateY(-2px);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .dua{
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 18px;
+            color: #2c3e50;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            word-spacing: 2px;
+            border: 1px solid #bdc3c7;
+            border-left: 5px solid #3498db;
+            border-right: 5px solid #3498db;
+            transition: background-color 0.3s ease;
+        }
+        .dua:hover{
+            background-color: #d0d7de;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #2980b9;
+            border-right: 5px solid #2980b9;
+            transform: translateY(-2px);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .tiga{
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 18px;
+            color: #2c3e50;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            word-spacing: 2px;
+            border: 1px solid #bdc3c7;
+            border-left: 5px solid #3498db;
+            border-right: 5px solid #3498db;
+            transition: background-color 0.3s ease;
+        }
+        .tiga:hover{
+            background-color: #d0d7de;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #2980b9;
+            border-right: 5px solid #2980b9;
+            transform: translateY(-2px);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        a:hover{
+            color: black;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        .hubungi{
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            word-spacing: 2px;
+            font-family: Arial, sans-serif;
+        }
+        .jason{
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .jason:hover{
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .rock{
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            border-radius: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .rock:hover{
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .vin{
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            border-radius: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .vin:hover{
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gambar, .gambarjuga, .gambargas{
+            justify-content: center;
+            margin-bottom: 20px;
+            display: flex;
+        }
+        img{
+            margin: auto;
+            display: flex;
+        }
+        .investor{
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 18px;
+            color: #2c3e50;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            word-spacing: 2px;
+            border: 1px solid #bdc3c7;
+            border-left: 5px solid #3498db;
+            border-right: 5px solid #3498db;
+            transition: background-color 0.3s ease;
+        }
+        .investor:hover{
+            background-color: #d0d7de;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #2980b9;
+            border-right: 5px solid #2980b9;
+            transform: translateY(-2px);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .TheInvestor{
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px;
+        }
+        .jason, .rock, .vin{
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .j, .d, .v{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            font-family: Arial, sans-serif;
+        }
+        .j:hover, .d:hover, .v:hover{
+            color: #3498db;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            transform: translateY(-2px);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header  id="header">
+        <div class="porto">RPLSMART</div>
+        <div class="list">
+            <ul>
+                <li><a href="#main">Tentang Kami</a></li>
+                <li><a href="#pelajaran">Pelajaran</a></li>
+                <li><a href="#footer">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="main">
+        <div class="welc">
+            <h1>Selamat Datang di RPLSMART</h1>
+        </div>
+        <div class="satu">
+            <h2>Tentang Kami</h2>
+            <p>RPLSMART adalah sebuah website yang menyediakan berbagai pelajaran pemrograman secara gratis. Website ini bertujuan untuk membantu para pelajar dan pengembang pemula dalam mempelajari berbagai bahasa pemrograman dan teknologi terkini. Dengan antarmuka yang user-friendly dan materi yang terstruktur, RPLSMART memudahkan pengguna untuk belajar dengan cara yang menyenangkan dan efektif.</p>
+        </div>
+        <div class="dua" id="pelajaran">
+            <h2>Pelajaran</h2>
+            <p>Di RPLSMART, kami menawarkan berbagai pelajaran pemrograman mulai dari dasar hingga tingkat lanjut. Materi yang kami sediakan mencakup bahasa pemrograman populer seperti Python, JavaScript, Java, C++, dan banyak lagi. Setiap pelajaran dilengkapi dengan contoh kode, latihan praktis, dan proyek nyata untuk membantu pengguna memahami konsep-konsep penting dalam pemrograman. Kami juga menyediakan forum diskusi di mana pengguna dapat bertanya dan berbagi pengetahuan dengan sesama pelajar.</p>
+        </div>
+        <div class="tiga">
+            <h2>Prestasi</h2>
+            <p>RPLSMART telah mencapai berbagai prestasi sejak diluncurkan. Kami telah membantu ribuan pelajar dan pengembang pemula untuk meningkatkan keterampilan pemrograman mereka. Beberapa pengguna kami telah berhasil mendapatkan pekerjaan di perusahaan teknologi terkemuka berkat pengetahuan yang mereka peroleh dari RPLSMART. Selain itu, kami juga telah menerima berbagai penghargaan dari komunitas teknologi atas kontribusi kami dalam menyediakan pendidikan pemrograman yang berkualitas dan gratis.</p>
+        </div>
+        <div class="investor">
+            <h2>Tim Kami</h2>
+            <p>RPLSMART didirikan oleh tiga siswa SMK yang memiliki minat besar dalam bidang teknologi dan pemrograman. Mereka adalah Jason, Rock, dan Vin. Ketiganya memiliki visi untuk menciptakan platform pembelajaran yang dapat diakses oleh siapa saja, di mana saja, tanpa biaya. Dengan latar belakang yang kuat dalam pemrograman dan pengalaman dalam mengajar, mereka berkomitmen untuk terus
+        </div>
+        <div class="TheInvestor">
+            <h1>THE INVESTOR</h1>
+        </div>
+        <div class="gambar">
+            <p class="j"><img src="Projek Sekolah/jason.jpg" class="jason">Jason Sthatham</p>
+            <p class="d"><img src="Projek Sekolah/rock.jpg" class="rock">Dwayne Jhonson</p>
+            <p class="v"><img src="Projek Sekolah/vin.webp" class="vin">Vin Diesel</p>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="hubungi">
+            <p>Hubungi Kami :</p>
+            <p><a href=""><i class="fa-brands fa-instagram"></i>ballll_zzz</a></p>
+            <p><a href=""><i class="fa-solid fa-envelope"></i>robotgedeg002@gmail.com</a></p>
+            <p><a href=""><i class="fa-brands fa-whatsapp"></i>081288314442</a></p>
+            <p><a href=""><i class="fa-brands fa-github"></i>Claudio_374</a></p>
+        </div>
+    </footer>
+</body>
+</html>
